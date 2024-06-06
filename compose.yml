@@ -9,7 +9,7 @@ networks:
 services:
   dvwa:
     build: .
-    image: ghcr.io/digininja/dvwa:latest
+    image: ghcr.io/digininja/dvwa@sha256:5e4939379857314910028af5fd51a91a420456e1b27d84573627172b2ebf21d3
     # Change `always` to `build` to build from local source
     pull_policy: always
     environment:
@@ -19,7 +19,7 @@ services:
     networks:
       - dvwa
     ports:
-      - 127.0.0.1:4280:80
+      - 80:80
     restart: unless-stopped
 
   db:

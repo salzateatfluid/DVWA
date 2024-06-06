@@ -9,9 +9,9 @@ networks:
 services:
   dvwa:
     build: .
-    image: ghcr.io/digininja/dvwa@sha256:5e4939379857314910028af5fd51a91a420456e1b27d84573627172b2ebf21d3
+    image: ghcr.io/digininja/dvwa
     # Change `always` to `build` to build from local source
-    pull_policy: always
+    pull_policy: build
     environment:
       - DB_SERVER=db
     depends_on:
